@@ -1,0 +1,462 @@
+ï»¿/*
+*Function:
+*Programed by:Ray_DK@163.com
+*Complete date:
+*Modified by:
+*Modified date:
+*Remarks:
+*/
+#ifndef __APP_LANGUAGE_H_
+#define __APP_LANGUAGE_H_
+
+#ifdef __cplusplus
+extern "C"{
+#endif
+
+#include "stm32f4xx.h"   
+
+
+#define COM_PILE_DATE						    __DATE__   
+#define COM_PILE_TIME						    __TIME__
+#define FW_VERSION								"3D Printer"
+#ifndef MINI
+#define SW_VERSION								"Software Version:SC-10-Shark-v0.228r"
+#else
+#define SW_VERSION								"Software Version:SC-10-Shark-v0.2231mini"
+#endif
+#define WIFI_VERSION							"WIFI Version:SC-10-Shark-v0.05"
+#define LASR_VERSION							"Laser Version:SC-10-Shark-v0.04 L"
+#define CO_TD_INFO								"Shenzhen Shengma 3D Technology co. LTD"
+
+
+#define	SK_NAME										"SKU-60-BASE"
+
+
+
+
+#define C_Print				"´òÓ¡"
+#define C_Ctol				"¿ØÖÆ"
+#define C_Set				"ÉèÖÃ"
+#define C_Preheat			"Ô¤ÈÈ"
+#define C_Move				"ÒÆ¶¯"
+#define C_Extrusion			"¼·³ö"
+#define C_Fan				"·çÉÈ"
+#define C_About				"¹ØÓÚ"
+#define C_Language			"ÓïÑÔ"
+#define C_Status			"×´Ì¬"
+#define	C_PrintName			"´òÓ¡ÎÄ¼şÃû"
+#define	C_Pause				"ÔİÍ£"
+#define C_Pursue			"¼ÌĞø"
+#define C_Stop				"Í£Ö¹"
+#define C_Tempertuare		"ÎÂ¶È"
+#define	C_Speed				"ËÙ¶È"
+#define	C_PrintCtrl			"´òÓ¡¿ØÖÆ"
+#define	C_PrintSpeed		"´òÓ¡ËÙ¶È"
+#define	C_SDPrint			"SD¿¨´òÓ¡"
+#define C_Back				"·µ»Ø"
+#define C_PrintFinish		"´òÓ¡Íê³É"
+#define	C_Confirm			"È·¶¨"
+#define C_Cancel			"È¡Ïû"	
+#define C_Leveling			"µ÷Æ½"
+#define C_Adjust			"ÆÁÄ»Ğ£×¼"
+#define C_Load				"½øÁÏ"
+#define C_Unload			"³öÁÏ"
+#define C_Fast				"¿ìËÙ"
+#define	C_Normal			"ÖĞËÙ"
+#define C_Slow				"ÂıËÙ"
+#define C_Continue			"¶ÏµãĞø´ò"
+
+#define	C_LaserCtol		"¼¤¹âµñ¿Ì¿ØÖÆ"
+#define C_LaserMove		"¼¤¹âµñ¿ÌÒÆ¶¯"
+#define	C_Zero				"¹éÁã"
+#define C_Filament		"ºÄ²ÄºÄ¾¡"
+#define C_autoleveling   "×Ô¶¯µ÷Æ½"
+#define	C_offset         "Æ«ÒÆ"
+
+
+#define E_Print				"Print"
+#define E_Ctol				"Control"
+#define E_Set					"Setting"
+#define E_Preheat			"Preheat"
+#define E_Move				"Move"
+#define E_Extrusion		"Extrusion"
+#define E_Fan					"Fan"
+#define E_About				"About"
+#define E_Language		"Language"
+#define E_Status			"Status"
+#define	E_PrintName		"PrintFileName"
+#define	E_Pause				"Pause"
+#define E_Pursue			"Pursue"
+#define E_Stop				"Stop"
+#define E_Tempertuare	"Temperature"
+#define	E_Speed				"Speed"
+#define	E_PrintCtrl		"PrintCtrl"
+#define E_PrintSpeed	"PrintSpeed"
+#define	E_SDPrint			"SD_Print"
+#define E_Back				"Back"
+#define E_PrintFinish	"PrintFinish"
+#define	E_Confirm			"Confirm"
+#define E_Cancel			"Cancel"
+#define E_Zero				"Zero"
+#define E_Ctrl				"Ctrl"
+#define E_Leveling			"Leveling"
+#define E_Adjust			"Adjust"
+#define E_Load				"Load"
+#define E_Unload			"Unload"
+#define E_Fast				"Fast"
+#define	E_Normal			"Normal"
+#define E_Slow				"Slow"
+#define E_Continue			"Continue"
+
+
+#define	E_LaserCtol		"LaserControl"
+#define E_LaserMove		"LaserMove"
+#define E_Filament		"Filament run out"
+#define E_StopPrint		"Stop Printting?"
+#define E_autoleveling   "Auto leveling"
+#define	E_offset         "offset"
+
+//å¾·æ–‡
+#define G_Print				"Drucken"
+#define G_Ctol				"Kontrolle"
+#define G_Set				"Einstellen"
+#define G_Preheat			"VorwÃ¤rmen"
+#define G_Move				"Bewegen"
+#define G_Extrusion			"ausdrÃ¼cken"
+#define G_Fan				"GeblÃ¤se"
+#define G_About				"Ãœber"
+#define G_Language			"Sprache"
+#define G_Status			"Zustand"
+#define	G_PrintName			"gedrucktes Dokument"
+#define	G_Pause				"Pause"
+#define G_Pursue			"Weiter"
+#define G_Stop				"Stopp"
+#define G_Tempertuare		"Temperatur"
+#define	G_Speed				"Geschwindigkeit"
+#define	G_PrintCtrl			"Drucken-Kontrolle"
+#define G_PrintSpeed		"Drucken-Geschwindigkeit"
+#define	G_SDPrint			"Drucken aus SD Karte"
+#define G_Back				"ZurÃ¼ck"
+#define G_PrintFinish		"Vollenden"
+#define	G_Confirm			"BestÃ¤tigen"
+#define G_Cancel			"Stornieren"
+#define G_Zero				"Nullstellen"
+#define G_Ctrl				"Kontrolle"
+#define G_Leveling			"Nivellierung"
+#define G_Adjust			"Kalibrierung"
+#define G_Load				"Belastung"
+#define G_Unload			"Entladen"
+#define G_Fast				"Schnell"
+#define	G_Normal			"Normal"
+#define G_Slow				"Langsam" 
+#define G_Continue			"Fortsetzen"
+
+
+#define	G_LaserCtol			"Lasergravur-Kontrolle"
+#define G_LaserMove			"Lasergravur-Bewegen"
+#define G_Filament			"kein Verbrauchsmaterial"
+#define G_StopPrint			"Drucken beenden?"
+#define G_autoleveling   	"Auto Nivellierung"
+#define	G_offset         	"Abweichung"
+
+//French
+#define F_Print				"Print"
+#define F_Ctol				"ContrÃ´ler"
+#define F_Set				"RÃ©glage"
+#define F_Preheat			"PrÃ©chauffer"
+#define F_Move				"DÃ©placer"
+#define F_Extrusion			"Extrusion"
+#define F_Fan				"Ventilateur"
+#define F_About				"Sur"
+#define F_Language			"Langage"
+#define F_Status			"Ã‰tat"
+#define	F_PrintName			"Nom de fichier de l'impression"
+#define	F_Pause				"Pause"
+#define F_Pursue			"Continuar"
+#define F_Stop				"Parada"
+#define F_Tempertuare		"Temperatura"
+#define	F_Speed				"Velocidad"
+#define	F_PrintCtrl			"Control de Impression"
+#define F_PrintSpeed		"Vitesse de l'impression"
+#define	F_SDPrint			"Impression de SD"
+#define F_Back				"Back"
+#define F_PrintFinish		"AchÃ¨vement de l'impression"
+#define	F_Confirm			"Confirmer"
+#define F_Cancel			"Annuler"
+#define F_Zero				"Remise Ã  zÃ©ro"
+#define F_Ctrl				"ContrÃ´ler"
+#define F_Adjust			"Calibration"
+#define F_Load				"Charge"
+#define F_Unload			"DÃ©charger"
+#define F_Fast				"Rapide"
+#define	F_Normal			"Normal"
+#define F_Slow				"Lent"
+#define F_Continue			"Continuer"
+
+#define	F_LaserCtol			"ContrÃ´le de gravure Ã  laser"
+#define F_LaserMove			"DÃ©placement de gravure Ã  laser"
+#define F_Filament			"Consommables Ã©puisÃ©s"
+#define F_StopPrint			"ArrÃªter l'impression?"
+#define F_Leveling			"Nivellement"
+#define F_autoleveling   "Nivellement auto"
+#define	F_offset         "dÃ©calage"
+
+//Spanish
+#define S_Print				"Print"
+#define S_Ctol				"Controlar"
+#define S_Set				"ConfiguraciÃ³n"
+#define S_Preheat			"Precalentamiento"
+#define S_Move				"Mover"
+#define S_Extrusion			"ExtrusiÃ³n"
+#define S_Fan				"Ventilador"
+#define S_About				"Sobre"
+#define S_Language			"Lengua"
+#define S_Status			"Estado"
+#define	S_PrintName			"Nombre del documento de  impresiÃ³n"
+#define	S_Pause				"SuspensiÃ³n"
+#define S_Pursue			"Continuar"
+#define S_Stop				"Parada"
+#define S_Tempertuare		"Temperatura"
+#define	S_Speed				"Velocidad"
+#define	S_PrintCtrl			"Control de impresiÃ³n"
+#define S_PrintSpeed		"Velocidad de impresiÃ³n"
+#define	S_SDPrint			"Imprimir SD"
+#define S_Back				"Back"
+#define S_PrintFinish		"TerminaciÃ³n de impresiÃ³n"
+#define	S_Confirm			"OK"
+#define S_Cancel			"Cancelar"
+#define S_Zero				"Reducir a cero"
+#define S_Ctrl				"Controlar"
+#define S_Leveling			"NivelaciÃ³n"
+#define S_Adjust			"CalibraciÃ³n"
+#define S_Load				"Carga"
+#define S_Unload			"Descargar"
+#define S_Fast				"RÃ¡pido"
+#define	S_Normal			"Normal"
+#define S_Slow				"Lento"
+#define S_Continue			"Seguir"
+
+#define	S_LaserCtol			"Control de grabado  lÃ¡ser"
+#define S_LaserMove			"Mover de grabado  lÃ¡ser"
+#define S_Filament			"No materiales para impresiÃ³n"
+#define S_StopPrint			"Â¿Dejar de imprimir?"
+#define S_autoleveling   "NivelaciÃ³n auto"
+#define	S_offset         "compensar"
+
+//Portuguese
+#define P_Print				"Print"
+#define P_Ctol				"ContrÃ´le"
+#define P_Set				"ConfiguraÃ§Ã£o"
+#define P_Preheat			"PrÃ©-aqueÃ§a"
+#define P_Move				"Movimento"
+#define P_Extrusion			"ExtruÃ§Ã£o"
+#define P_Fan				"Ventilador"
+#define P_About				"Sobre"
+#define P_Language			"LÃ­ngua"
+#define P_Status			"Estado"
+#define	P_PrintName			"Nome do documento imprimido"
+#define	P_Pause				"Pausar"
+#define P_Pursue			"Continuar"
+#define P_Stop				"Parar"
+#define P_Tempertuare		"Temperatura"
+#define	P_Speed				"Velocidade"
+#define	P_PrintCtrl			"ContrÃ´le de impressÃ£o"
+#define P_PrintSpeed		"Velocidade de impressÃ£o"
+#define	P_SDPrint			"ImpressÃ£o sd"
+#define P_Back				"Back"
+#define P_PrintFinish		"ImpressÃ£o terminada"
+#define	P_Confirm			"OK"
+#define P_Cancel			"Cancelar"
+#define P_Zero				"Voltar a zero"
+#define P_Ctrl				"ContrÃ´le"
+#define P_Adjust			"CalibraÃ§Ã£o"
+#define P_Load				"Carga"
+#define P_Unload			"Descarregar"
+#define P_Fast				"RÃ¡pido"
+#define	P_Normal			"Normal"
+#define P_Slow				"Lento"
+#define P_Continue			"Continuar"
+
+#define	P_LaserCtol			"ContrÃ´le de gravaÃ§Ã£o por laser"
+#define P_LaserMove			"Movimento de gravaÃ§Ã£o por laser"
+#define P_Filament			"Esgotamento de consumÃ­veis"
+#define P_StopPrint			"Parar de imprimir?"	
+#define P_Leveling			"Nivelamento"
+#define P_autoleveling   "Nivelamento auto"
+#define	P_offset         "Deslocamento"
+
+//ÈÕÓï
+#define J_Print				"Ó¡Ë¢"
+#define J_Ctol				"¥³¥ó¥È¥í©`¥ë"
+#define J_Set				"ÔO¶¨"
+#define J_Preheat			"ÓèŸá"
+#define J_Move				"ÒÆ„Ó"
+#define J_Extrusion			"Ñº³ö"
+#define J_Fan				"¥Õ¥¡¥ó"
+#define J_About				"¤Ë¤Ä¤¤¤Æ"
+#define J_Language			"ÑÔÕZ"
+#define J_Status			"×´‘B"
+#define	J_PrintName			"Ó¡Ë¢¥Õ¥¡¥¤¥ëÃû"
+#define	J_Pause				"Ò»•rÍ£"
+#define J_Pursue			"¾A¤±¤ë"
+#define J_Stop				"Í£Ö¹"
+#define J_Tempertuare		"ÎÂ¶È"
+#define	J_Speed				"¥¹¥Ô©`¥É"
+#define	J_PrintCtrl			"Ó¡Ë¢¥³¥ó¥È¥í©`¥ë"
+#define J_PrintSpeed		"Ó¡Ë¢¥¹¥Ô©`¥É"
+#define	J_SDPrint			"SD¥«©`¥ÉÓ¡Ë¢"
+#define J_Back				"‘ø¤ë"
+#define J_PrintFinish		"Ó¡Ë¢ÍêÁË"
+#define	J_Confirm			"´_¶¨"
+#define J_Cancel			"È¡Ïû"
+#define J_Zero				"¥¯¥ê¥¢"
+#define J_Ctrl				"¥³¥ó¥È¥í©`¥ë"
+#define J_Leveling			"µ×°åÕ{Õû"
+#define J_Adjust			"Ó†Õı"
+#define J_Load				"Ø“ºÉ"
+#define J_Unload			"½µ¤í¤¹"
+#define J_Fast				"ËÙ¤¤"
+#define	J_Normal			"ÆÕÍ¨"
+#define J_Slow				"¥¹¥í©`"
+#define J_Continue			"¾@¾A¤¹¤ë"
+
+
+
+#define	J_LaserCtol			"¥ì©`¥¶©`¬¿Ì¥³¥ó¥È¥í©`¥ë"
+#define J_LaserMove			"¥ì©`¥¶©`¬¿ÌÒÆ„Ó"
+#define J_Filament			"²ÄÁÏ¤¬×ã¤ê¤Ê¤¤¤Ç¤¹"	
+#define J_StopPrint			"Ó¡Ë¢¤òÍ£Ö¹¤·¤Ş¤¹¤«? "
+#define J_autoleveling   	"¥»¥ë¥Õ¥ì¥Ù¥ê¥ó¥°"
+#define	J_offset         	"¥ª¥Õ¥»¥Ã¥È"
+
+//¶íÓï
+#define R_Print				"§±§Ö§é§Ñ§ä§î"
+#define R_Ctol				"§±§â§à§Ó§Ö§â§Ü§Ñ"
+#define R_Set				"§¯§Ñ§ã§ä§â§à§Û§Ü§Ú"
+#define R_Preheat			"§±§â§Ö§Õ§Ó§Ñ§â§Ú§ä§Ö§İ§î§ß§í§Û §á§à§Õ§à§Ô§â§Ö§Ó"
+#define R_Move				"§±§Ö§â§Ö§Ş§Ö§ë§Ö§ß§Ú§Ö"
+#define R_Extrusion			"§¿§Ü§ã§ä§â§å§Ù§Ú§ñ"
+#define R_Fan				"§£§Ö§ß§ä§Ú§İ§ñ§ä§à§â"
+#define R_About				"§°§Ò"
+#define R_Language			"§Á§Ù§í§Ü"
+#define R_Status			"§³§à§ã§ä§à§ñ§ß§Ú§Ö"
+#define	R_PrintName			"§±§Ö§é§Ñ§ä§î §Ú§Ş§Ö§ß§Ú §æ§Ñ§Û§İ§Ñ"
+#define	R_Pause				"§±§Ñ§å§Ù§Ñ"
+#define R_Pursue			"§±§â§à§Õ§à§İ§Ø§Ú§ä§î"
+#define R_Stop				"§³§ä§à§á"
+#define R_Tempertuare		"§´§Ö§Ş§á§Ö§â§Ñ§ä§å§â§Ñ"
+#define	R_Speed				"§³§Ü§à§â§à§ã§ä§î"
+#define	R_PrintCtrl			"§µ§á§â§Ñ§Ó§İ§Ö§ß§Ú§Ö §á§Ö§é§Ñ§ä§î§ğ"
+#define R_PrintSpeed		"§³§Ü§à§â§à§ã§ä§î §á§Ö§é§Ñ§ä§Ú"
+#define	R_SDPrint			"§±§Ö§é§Ñ§ä§î SD-§Ü§Ñ§â§ä§í"
+#define R_Back				"§¯§Ñ§Ù§Ñ§Õ"
+#define R_PrintFinish		"§©§Ñ§Ó§Ö§â§ê§Ö§ß§Ú§Ö §á§Ö§é§Ñ§ä§Ú"
+#define	R_Confirm			"§¥§Ñ"
+#define R_Cancel			"§°§ä§Ş§Ö§ß§Ñ"
+#define R_Zero				"§³§Ò§â§à§ã"
+#define R_Ctrl				"§±§â§à§Ó§Ö§â§Ü§Ñ"
+#define R_Adjust			"ÆÁÄ»Ğ£×¼"
+#define R_Continue			"§±§â§à§Õ§à§İ§Ø§Ú§ä§î"
+
+#define	R_LaserCtol			"§¬§à§ß§ä§â§à§İ§î §İ§Ñ§Ù§Ö§â§ß§à§Û §Ô§â§Ñ§Ó§Ú§â§à§Ó§Ü§Ú"
+#define R_LaserMove			"§±§Ö§â§Ö§Ş§Ö§ë§Ö§ß§Ú§Ö §İ§Ñ§Ù§Ö§â§ß§à§Û §Ô§â§Ñ§Ó§Ú§â§à§Ó§Ü§Ú"
+#define R_Filament			"§²§Ñ§ã§ç§à§Õ§ß§í§Ö §Ş§Ñ§ä§Ö§â§Ú§Ñ§İ§í §Ú§ã§é§Ö§â§á§Ñ§ß§í"
+
+//Italian
+#define I_Print				"Print"
+#define I_Ctol				"Controlla"
+#define I_Set				"Impostazioni"
+#define I_Preheat			"Preriscalda"
+#define I_Move				"Mossa"
+#define I_Extrusion			"Estrusione"
+#define I_Fan				"Ventilatore"
+#define I_About				"Su"
+#define I_Language			"linguaggio"
+#define I_Status			"Stato"
+#define	I_PrintName			"Filenome stampatp"
+#define	I_Pause				"Pausa"
+#define I_Pursue			"Continua"
+#define I_Stop				"Ferma"
+#define I_Tempertuare		"Temperatura"
+#define	I_Speed				"VelocitÃ "
+#define	I_PrintCtrl			"Controllo di stampa"
+#define I_PrintSpeed		"VelocitÃ  di stampa"
+#define	I_SDPrint			"Stampa da SD"
+#define I_Back				"Back"
+#define I_PrintFinish		"Fine stampa"
+#define	I_Confirm			"Conferma"
+#define I_Cancel			"Annulla"
+#define I_Zero				"Azzera"
+#define I_Ctrl				"Controlla"
+#define I_Leveling			"livellamento"
+#define I_Adjust			"correzione"
+#define I_Load				"Caricare"
+#define I_Unload			"Scaricare"
+#define I_Fast				"Veloce"
+#define	I_Normal			"Normale"
+#define I_Slow				"Lento"
+#define I_Continue			"Continua"
+
+#define	I_LaserCtol			"Controllo dell'incisione laser"
+#define I_LaserMove			"Incisione laser mobile"
+#define I_Filament			"Materiale esaurito"
+#define I_StopPrint			"Smetti di stampare?"	
+#define I_autoleveling   "Livellamento auto"
+#define	I_offset         "compensare"
+
+
+//#define MSG_AUTHOR								" Kim"
+#define MSG_CONTACT								"Ray_DK@163.com"
+#define MSG_COTD									"http://www.KimAuto.com.cn"
+
+//#define __TIM2_CCRV_MOTO					//????????????????
+#define __TMC_DRIVER							//??TMC????????????
+#define __USR_SYS_CONFIG_SPEED		//????????,???????????
+
+#define USER_DEBUG_LEVEL 2
+
+#if (USER_DEBUG_LEVEL > 0)
+
+#define  USR_ErrLog(...)    printf("ERROR: ") ;\
+                            printf(__VA_ARGS__);\
+														printf("\r\n");
+#else
+#define USR_ErrorLog(...)
+#endif
+
+#if (USER_DEBUG_LEVEL > 1)
+#define  USR_UsrLog(...)    printf(__VA_ARGS__);\
+														printf("\r\n");
+#else
+#define USR_UsrLog(...)
+#endif
+
+#if(USER_DEBUG_LEVEL > 2)
+#define  USR_DbgLog(...)    printf("DBUG: ");\
+                            printf(__VA_ARGS__);\
+                            printf("\r\n");
+#else
+#define USR_DbgLog(...)
+#endif
+
+/*
+ĞŞ¸ÄËµÃ÷:
+1.µ±Ç°Ê¹ÓÃ²ãÀ´´¦Àí´òÓ¡ÎÊÌâ,ÔÚ²âÊÔ¹ı³ÌÖĞ·¢ÏÖÓĞµÄÇĞÆ¬Èí¼şÃ»ÓĞ×Ü²ãÊıĞÅÏ¢,Òò´ËÊ¹ÓÃ´ËÖÖ°ì·¨Ã»ÓĞ°ì·¨½â¾ö´òÓ¡±ÈÀıÎÊÌâ
+
+*/
+
+
+
+#ifdef __cplusplus
+}
+#endif				//End of __cplusplus
+
+#endif				//End of files
+
+
+
+
+
+
+
+
